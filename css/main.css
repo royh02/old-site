@@ -79,7 +79,6 @@ Primary use:
   font-size: 12px;
   color: #fff;
   line-height: 1;
-  text-transform: uppercase;
 }
 
 
@@ -88,13 +87,18 @@ Primary use:
 [ M-Text 16 - 25 ]*/
 .m1-txt1 {
   font-family: Poppins-Regular;
-  font-size: 18px;
-  color: #555;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-
+.m1-txt2 {
+  font-family: Poppins-Thin;
+  font-size: 18px;
+  color: rgb(255, 254, 254);
+  line-height: 1.2;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ L-Text >= 26 ]*/
@@ -102,7 +106,7 @@ Primary use:
   font-family: Poppins-Thin;
   font-size: 72px;
   line-height: 1.1;
-  color: rgba(255,255,255,0.5);
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   letter-spacing: 15px;
 }
@@ -182,10 +186,10 @@ Primary use:
 /*==================================================================
  HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW 
 ==================================================================*/
-.placeholder0::-webkit-input-placeholder { color: #999999;}
-.placeholder0:-moz-placeholder { color: #999999;}
-.placeholder0::-moz-placeholder { color: #999999;}
-.placeholder0:-ms-input-placeholder { color: #999999;}
+.placeholder0::-webkit-input-placeholder { color: #fff;}
+.placeholder0:-moz-placeholder { color: #fff;}
+.placeholder0::-moz-placeholder { color: #fff;}
+.placeholder0:-ms-input-placeholder { color: #fff;}
 
 
 /*---------------------------------------------*/
