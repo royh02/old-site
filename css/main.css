@@ -80,8 +80,21 @@ Primary use:
   color: #fff;
   line-height: 1;
 }
-
-
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #e47474;
+  background-color: transparent;
+  text-shadow: #fff;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ M-Text 16 - 25 ]*/
