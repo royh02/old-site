@@ -9,11 +9,13 @@
 h1 {
     font-family: 'Lora', serif;
     font-weight: 400;
-    font-size: 72px;
+    font-size: 56px;
     background-color: #bcd4e6;
     border-bottom-style: solid;
     border-bottom-color: black;
     text-align: center;
+    margin-top: 0%;
+    padding: 60px;
 }
 h2 {
     font-family: "Lato", serif;
@@ -22,11 +24,14 @@ h2 {
     border-bottom-color: black;
 }
 body {
+    margin: 0%;
+}
+.blog {
     font-family: 'Lato', serif;
     font-weight: 20;
     font-size: 24px;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 .desc {
     font-family: 'Lato', serif;
@@ -40,6 +45,9 @@ body {
 }
 .strikethru {
     text-decoration: line-through;
+}
+.column {
+    background-color: #bcd4e6;
 }
 a:link {
   color: #6a3535;
@@ -56,6 +64,24 @@ a:hover {
   background-color: transparent;
   text-shadow: #fff;
 }
+@media only screen and (max-width: 1200px){
+    h1 {
+        background-color: #bce6d2;
+    }
+    .blog {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media only screen and (max-width: 420px){
+    h1 {
+        background-color: #e6bce0;
+    }
+    .blog {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
 </style>
 <h1>
     Scribbl.IEEE 
@@ -63,6 +89,7 @@ a:hover {
     Activity Blog
 </h1>
 <body>
+    <div class="blog">
     <i class="desc">
         *Note: You can only access the Doc hyperlinks
         if you are part of the Scribbl.IEEE team :)
@@ -80,19 +107,16 @@ a:hover {
             Week 1 — (9/27)
         </a>
     </h2>
-        <ol>
-            <li>
-                Intro to Git Workflow
-                <ul class="desc">
-                    <li>Git Commands</li>
-                    <li>Forking</li>
-                </ul>
-            </li>
+    <ol>
+        <li>
+            Intro to Git Workflow
+            <ul class="desc">
+                <li>Git Commands</li>
+                <li>Forking</li>
+            </ul>
+        </li>
             <li>
                 Brainstorm game ideas
-                <ul class="desc">
-                    <li></li>
-                </ul>
             </li>
             <li>
                 Basic HTML Tutorial
@@ -115,5 +139,44 @@ a:hover {
             more, I will move on to non-static stuff 
             (hopefully).
         </p>
+    <h2>
+        <a href="https://bit.ly/33QclPD">
+            Week 2 — (10/4)
+        </a>
+    </h2>
+    <ol>
+        <li>
+            <a href="https://bit.ly/30UiI2x">
+                Idea Brainstorming Part 2
+            </a>
+            <ul class="desc">
+                <li>Telephone-like Drawing Game - Jessie</li>
+                <li>Rapidfire Round with Drawing + Guessing - Roy</li>
+                <li>Among Us + Skribbl.io - Arthur</li>
+            </ul>
+            <li>
+                Responsive HTML
+                <ul class="desc">
+                    <li>@media command</li>
+                </ul>
+            </li>
+            <li>
+                Javascript Embed
+                <ul class="desc">
+                    <li>Drawing canvas prototype</li>
+                </ul>
+            </li>
+        </ol>
+        <p class="desc">
+            This week was more hectic with mid-terms and such, so I didn't
+            have much time to do self-learning on the JS portion of this
+            week's tutorial. I did get my website to become responsive (PLS
+            GO CHECK IT OUT BY RESIZING YOUR BROWSER WINDOW) and I was 
+            planning on adding a navbar. I fixed some styling stuff
+            and my style section is getting REALLY unruly so time to put 
+            that in a CSS file. Hopefully we can have a finalized game idea
+            for this week so that concrete planning can begin.
+        </p>
+    </div>
 </body>
 </html>
