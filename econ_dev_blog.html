@@ -1,0 +1,633 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Economic Development</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1b471074-c31b-408e-8729-130347de2c3c" class="page serif"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1513596846216-48ae70153834?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjYzOTIxfQ" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📈</span></div><h1 class="page-title">Economic Development</h1></header><div class="page-body"><p id="a1deb161-6e2c-4183-91ad-dec5c8ce3847" class="block-color-gray">Key info site for you to learn more about what economic development really is</p><p id="e7a6434d-55ec-4f77-8fdf-371e590dbbc5" class="block-color-gray">Cover by: <a href="https://unsplash.com/photos/3Tf1J8q9bBA?utm_source=63921&amp;utm_medium=referral">Markus Spiske</a></p><p id="eab949c9-abfc-4620-8675-8eb66c4db316" class=""><em>By Roy Huang</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="260df20c-46b8-45cb-851e-94a22a6089b7"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">With COVID-19 hitting families financially worldwide, a topic that would often come up is the <strong>economy. </strong>With the US Federal Elections taking place and the numbers thrown back and forth between politicians, you start to think, <em>what do these values really mean</em>? The talk of &quot;creating jobs,&quot; and &quot;What exactly is economic development and how are these seemingly exatravagant graphs related to our lives?
+
+To begin, it would be beneficial to get to know the numbers, referred to as &quot;</div></figure><h2 id="713c3c6e-ad0a-4b54-8867-870b722273b9" class="">Economic Indices</h2><hr id="27fd4cea-762b-4164-b84d-812203fbb4df"/><p id="3098cfb2-5e02-477a-85bb-83bf9495b906" class="">The numbers politicans go on about are &quot;<strong>economic indices.</strong>&quot; There are plenty of indices to look at, and they all give a <strong>glimpse</strong> into economic development. There are many other factors, many of which are difficult to explain in a general manner, these indices are often used to approximate development rates. We will look at 2 of the largest</p><h3 id="adc186ca-3052-4ac9-89b7-72696fc5e703" class="">Gross Domestic Product (GDP)</h3><hr id="52cc5565-433e-4ae9-9ef9-4da0e5e1c8ee"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2ee739ed-d68e-4442-b071-6e2109abb252"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>GDP </strong>measures &quot;the monetary value of final goods and services—that is, those that are bought by the final user—produced in a country in a given period of time<a href=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a>.&quot; </div></figure><p id="6b192573-0c8d-4940-ab4e-deb4d224ef33" class="">When we talk GDP, we usually talk <strong>GDP Growth</strong>. </p><hr id="81484100-ccda-4438-9db0-92baff434885"/><p id="b5ff078f-a236-4f8f-866b-ff2c86050749" class="">Fast growing GDP can mean:</p><ol id="27cd641c-7d24-4d6c-9d36-435ef2beefdd" class="numbered-list" start="1"><li>Healthy economy</li></ol><ol id="216a674a-4011-435a-8c11-091e6e974989" class="numbered-list" start="2"><li>Increase in employment</li></ol><ol id="d437bd62-fcab-4f80-bc35-1371dfa93ef4" class="numbered-list" start="3"><li>Increase in per capita (per person) income</li></ol><hr id="df35c8fd-7996-4229-a804-216c2f918431"/><p id="b801e18f-72dc-4217-b9e0-5a186fd8ade5" class="">Another important factor in considering GDP is <strong>purchasing power</strong>. Purchasing power is the value of a currency expressed in terms of the amount of goods or services that one unit of money can buy<a href=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a>. A great way to put this in perspective is the <strong>Big Mac Index</strong>. Because the <strong>Big Mac </strong>(yes, the 🍔 burger 🍔!) is a very standard item across the globe, it can be used to show how much a given currency can buy compared to another.</p><figure id="60229bb3-5dcd-4b52-9359-261769702d84" class="image"><a href="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled.png"><img style="width:962px" src="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled.png"/></a><figcaption>Source: The Economist</figcaption></figure><p id="8e348eca-c967-43eb-9347-f9398f714bdd" class="">Here, we see that ￥20 Chinese Yuan can buy a Big Mac, which costs $5 US Dollars. If we work out the math using the exchange rate:</p><div id="a4acc1c8-b715-4575-bc66-ad677232eca2" class="column-list"><div id="00d643eb-9867-4653-8209-b99645b9a66b" style="width:50%" class="column"><figure id="a504421f-c4a9-4715-a3fb-7e8d43a70ceb" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>￥</mtext><mn>20.00</mn><mtext> </mtext><mo>×</mo><mtext> </mtext><mfrac><mrow><mi mathvariant="normal">$</mi><mn>1</mn></mrow><mrow><mtext>￥</mtext><mn>6.4</mn></mrow></mfrac><mo>=</mo><mi mathvariant="normal">$</mi><mn>3.13</mn></mrow><annotation encoding="application/x-tex">￥20.00 \ \times \ \frac{\$1}{￥6.4} = \$3.13 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">￥</span><span class="mord">2</span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace"> </span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace"> </span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">￥</span><span class="mord">6</span><span class="mord">.</span><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6769999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">$</span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">$</span><span class="mord">3</span><span class="mord">.</span><span class="mord">1</span><span class="mord">3</span></span></span></span></span></div></figure></div><div id="48f4b079-ea89-46d2-a2e9-c76094967a3d" style="width:50%" class="column"><p id="9e0ab5b4-0a91-4891-b43d-5e5112b0a169" class="">So a Big Mac can be bought for the equivalent of<strong> just $3.13</strong> in China, which is a lot cheaper than in the US ($5)! This means that the <strong>purchasing power</strong> of the Yuan is <em>greater than</em> that of the US Dollar</p></div></div><figure id="2bcacefa-3c22-402f-a092-3239e9d20bee"><a href="https://www.economist.com/news/2020/07/15/the-big-mac-index" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Big Mac index</div><div class="bookmark-description">T HE BIG MAC index was invented by The Economist in 1986 as a lighthearted guide to whether currencies are at their &quot;correct&quot; level. It is based on the theory of purchasing-power parity (PPP), the notion that in the long run exchange rates should move towards the rate that would equalise the prices of an identical basket of goods and services (in this case, a burger) in any two countries.</div></div><div class="bookmark-href"><img src="https://www.economist.com/engassets/ico/favicon.f1ea9088.ico" class="icon bookmark-icon"/>https://www.economist.com/news/2020/07/15/the-big-mac-index</div></div><img src="https://www.economist.com/img/b/1280/721/90/sites/default/files/20180707_WOC666.png" class="bookmark-image"/></a></figure><div id="8b261be6-c564-4fe7-a80d-4996a5b088ce" class="column-list"><div id="7b75e7f3-098c-4b0e-9a76-26efcf23bdf9" style="width:50%" class="column"><p id="fff42160-7e20-4c36-90aa-5c0a6a450e6b" class="">The difference in purchasing power is known as <strong>purchasing power parity (PPP). </strong>Economists like to use GDP with PPP factored in today to analyze economic situations because it reflects the <strong>standard of living</strong> and <strong>economic productivity</strong> in a way that can be <strong>easily compared</strong>. Here is a good graphic that compares PPP-adjusted GDP.</p></div><div id="da1b5ac4-e6fb-4faf-92fe-6f37954730b8" style="width:50%" class="column"><figure id="69d647ad-470a-4787-9840-d326c37ba404" class="image"><a href="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled%201.png"><img style="width:528px" src="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled%201.png"/></a></figure></div></div><figure id="1328acbe-944c-416f-9d53-2062bad281ad"><a href="https://www.investopedia.com/updates/purchasing-power-parity-ppp/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">What Is Purchasing Power Parity (PPP)?</div><div class="bookmark-description">One popular macroeconomic analysis metric to compare economic productivity and standards of living between countries is purchasing power parity (PPP). PPP is an economic theory that compares different countries&#x27; currencies through a &quot;basket of goods&quot; approach, not to be confused with the Paycheck Protection Program created by the CARES Act.</div></div><div class="bookmark-href"><img src="https://www.investopedia.com/static/1.128.0/icons/favicons/favicon.ico" class="icon bookmark-icon"/>https://www.investopedia.com/updates/purchasing-power-parity-ppp/</div></div><img src="https://www.investopedia.com/thmb/9PRoucYQAD8VA9oEkRQpgOGLYOc=/1500x1000/filters:fill(auto,1)/GettyImages-928696036-8f95a38247ad42fa809c48d0e2350601.jpg" class="bookmark-image"/></a></figure><h3 id="19a0c82d-de06-40d5-9fad-685a34432056" class="">Gross National Income</h3><hr id="026ab191-fbbe-4698-b8d9-6184df9c8f76"/><p id="e31b3a43-c921-496f-8d5b-0317ca0fbf91" class="">Instead of looking at the value of products and services in a country in <strong>general</strong>, GNP only looks at the por</p><h3 id="ae15fadc-5a38-4f4b-97a3-e639c2a52474" class="">Gini Coefficient</h3><hr id="0572ce6a-d721-439a-a0da-fca504d148f5"/><p id="ea386e7e-90d4-4674-90f4-3bbe37aa6d9a" class="">There is a huge flaw with looking at such a generalized index like the GDP — it is an average. This means that it forgets <strong>inequality in income</strong><em><strong>. </strong></em>The popular saying <strong>the rich get richer, and the poor gets poorer</strong> is exactly what the Gini Coefficient looks at. </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="97d9b2da-d1c1-4c23-acaa-18a0f090c2a9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The Gini coefficient is a measurement of inequality in the distribution of family income in a country<a href=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a>.  
+It is ranked on a scale of 0 to 1. 
+0 means perfect equality, and 1 means perfect inequality (a single person holds all the income)</div></figure><p id="9401a911-b913-405b-94c8-e3dc49cec019" class="">When inequality is factored in, it helps to see how economic development and growth will translate into betterment of each income bracket. For instance, high growth in a country with <strong>low</strong> Gini would mean the poor greatly benefits. However, high growth in a country with <strong>high</strong> Gini would mean the rich reaps most of the benefits while the situation of the poor does not improve by much relatively. As seen in the graph, we see that in the US, there is a disproportional growth in the upper 10% compared to the other 90% that is very evident of inequality. Thus, the increase in GDP only reflects the development of the few elites. In the post-recession period (2009-2012) as shown in the green box, the 90% suffered the most during economic downturns. This is an example of how inequality provides a deeper layer of understanding into the plain GDP values.</p><figure id="4da6f669-0aa9-46ea-81f4-23dfecd98fc5" class="image"><a href="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled%202.png"><img style="width:528px" src="Economic%20Development%2060229bb35dcd4b529359261769702d84/Untitled%202.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="993525b3-2ecd-4399-88ab-bc4601d1d4c4"><div style="font-size:1.5em"><span class="icon">🔢</span></div><div style="width:100%">A study conducted by the World Bank showed that for every 1% increase in Gini, there is a -1.1% growth in GDP per capita over a 5 year period. Worse, over a longer period, that decrease can get up to -4.5%<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>. This directly correlates inequality with per capita growth.</div></figure><figure id="a27a9da1-5160-406d-99f2-c86e25a3234e"><a href="https://www.weforum.org/agenda/2015/07/how-does-income-inequality-affect-economic-growth/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How does income inequality affect economic growth?</div><div class="bookmark-description">The World Economic Forum is an independent international organization committed to improving the state of the world by engaging business, political, academic and other leaders of society to shape global, regional and industry agendas. Incorporated as a not-for-profit foundation in 1971, and headquartered in Geneva, Switzerland, the Forum is tied to no political, partisan or national interests.</div></div><div class="bookmark-href"><img src="https://www.weforum.org/favicon.ico?v=lk270KxwRj" class="icon bookmark-icon"/>https://www.weforum.org/agenda/2015/07/how-does-income-inequality-affect-economic-growth/</div></div><img src="https://assets.weforum.org/article/image/responsive_medium_TnZvXn_WU46F6OO6zLxooEkg6P3c5oNCKAxP49TA8VM.jpg" class="bookmark-image"/></a></figure><p id="7e4e710c-2566-42cb-a034-7a7f80ab88de" class="">
+</p><h3 id="c8c82f56-a36f-4514-aa81-891656922569" class="">Additional Indices</h3><hr id="a9d481ee-d5b5-4017-8aa6-cfb106660bf1"/><p id="13d34d6d-55dd-4d37-8a5f-bcdfe290ed72" class="">There are a few more less-known indices, including <strong>Gross National Product (GNP) </strong>and <strong>Gross National Income (GNI). </strong>A comparison between these and the GDP can be found in more detail here:</p><figure id="94b35ea7-698c-4558-a739-464a25f84f4a"><a href="https://www.investopedia.com/terms/g/gnp.asp" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gross National Product (GNP) Definition</div><div class="bookmark-description">Gross national product (GNP) is an estimate of total value of all the final products and services turned out in a given period by the means of production owned by a country&#x27;s residents.</div></div><div class="bookmark-href"><img src="https://www.investopedia.com/static/1.128.0/icons/favicons/favicon.ico" class="icon bookmark-icon"/>https://www.investopedia.com/terms/g/gnp.asp</div></div><img src="https://www.investopedia.com/thmb/NeaeRAPjzcRI5vUzeqB_S_3AAas=/680x440/filters:fill(auto,1)/investing3-5bfc2b8e46e0fb0026016f32.jpg" class="bookmark-image"/></a></figure><figure id="916dcc2a-4e6f-445f-aa71-8dec34c3823a"><a href="https://www.investopedia.com/terms/g/gross-national-income-gni.asp" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">What Is Gross National Income (GNI)?</div><div class="bookmark-description">GNI is the total amount of money earned by a nation&#x27;s people and businesses. It is used to measure and track a nation&#x27;s wealth from year to year. The number includes the nation&#x27;s gross domestic product plus the income it receives from overseas sources.</div></div><div class="bookmark-href"><img src="https://www.investopedia.com/static/1.128.0/icons/favicons/favicon.ico" class="icon bookmark-icon"/>https://www.investopedia.com/terms/g/gross-national-income-gni.asp</div></div><img src="https://www.investopedia.com/thmb/Wu-HMyjtCuVJAff7QZXHT9dH9UQ=/680x440/filters:fill(auto,1)/business_building_153697270-5bfc2b9846e0fb0083c07d69.jpg" class="bookmark-image"/></a></figure><h2 id="5af0f11a-644c-48d7-8dc3-16f26dff1362" class="">Conclusion</h2><hr id="69b4b158-9d3f-4078-a651-c9d68b09c19d"/><p id="fc0231a0-343f-455b-ad15-d91ccfc5f206" class="">Economic development is a difficult concept to quantify through some means, but using economic indices can provide a general, nomothetic insight. I hope that this site gave you more knowledge that can be beneficial!</p><h3 id="8ef1d9b7-ba14-4e21-aa0f-7f94d12057f3" class="">Sources:</h3><ol id="720e31c1-5999-4eeb-b49e-5e65e73aa518" class="numbered-list" start="1"><li><a href="https://www.imf.org/external/pubs/ft/fandd/basics/gdp.htm">https://www.imf.org/external/pubs/ft/fandd/basics/gdp.htm</a></li></ol><ol id="86094e6f-0b26-4e4a-a498-c47690c376e6" class="numbered-list" start="2"><li><a href="https://www.investopedia.com/terms/p/purchasingpower.asp">https://www.investopedia.com/terms/p/purchasingpower.asp</a></li></ol><ol id="b27d7cd8-00fb-4bb0-b32e-f099cc6fa7e8" class="numbered-list" start="3"><li><a href="https://www.cia.gov/library/publications/the-world-factbook/rankorder/2172rank.html">https://www.cia.gov/library/publications/the-world-factbook/rankorder/2172rank.html</a></li></ol><ol id="7585c047-96f7-405b-9f0e-9ac7a18d1968" class="numbered-list" start="4"><li><a href="https://www.weforum.org/agenda/2015/07/how-does-income-inequality-affect-economic-growth/">https://www.weforum.org/agenda/2015/07/how-does-income-inequality-affect-economic-growth/</a></li></ol><ol id="7cbed8c3-552a-44cb-88b6-a9e9e5a19d5d" class="numbered-list" start="5"><li><a href="https://www.investopedia.com/terms/g/gnp.asp">https://www.investopedia.com/terms/g/gnp.asp</a></li></ol><p id="72ec4d5b-1118-45ec-ba76-cb34a2a40e22" class="">
+</p></div></article></body></html>
